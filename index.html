@@ -51,11 +51,9 @@
         $(document).ready(function(){
           $(document).on('submit', '#mc-embedded-subscribe-form', function(e){
             e.preventDefault()
-            var $form = $(this)
 
-            // $form.addClass('disabled')
-
-            // $form.find('.message').remove()
+            $('#mc-embedded-subscribe-form').addClass('disabled')
+            $("#mc-embedded-subscribe-form :input").prop("disabled", true);
 
             $.ajax({
               method: 'POST',
@@ -67,14 +65,12 @@
               contentType: "application/json; charset=utf-8",
               success: function (data, textStatus, jqXHR) {
                 if (data.result === 'success') {
-                  console.log('success')
-                  $('#mc-embedded-subscribe-form').addClass('disabled')
-                  $("#mc-embedded-subscribe-form :input").prop("disabled", true);
                   $('#mc-embedded-subscribe-form').before($('<p>').text(data.msg))
                 } else {
-                  console.log('nope')
+                  $('#mc-embedded-subscribe-form').removeClass('disabled')
+                  $("#mc-embedded-subscribe-form :input").prop("disabled", false);
+                  $('#mc-embedded-subscribe-form').before($('<p>').text(data.msg))
                 }
-                console.log(data)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 console.log(errorThrown)
