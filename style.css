@@ -76,3 +76,20 @@ h3 {
 h1,h2,h3,h4,h5,h6 {
   line-height: 1.1;
 }
+
+::-webkit-input-placeholder {
+  color: #dce3ff;
+}
+::-moz-placeholder {
+  color: #dce3ff;
+}
+:-ms-input-placeholder {
+  color: #dce3ff;
+}
+:-moz-placeholder {
+  color: #dce3ff;
+}
+
+form.disabled {
+  opacity: .5;
+}
