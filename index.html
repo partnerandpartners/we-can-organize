@@ -52,6 +52,8 @@
           $(document).on('submit', '#mc-embedded-subscribe-form', function(e){
             e.preventDefault()
 
+            var $form = $(this)
+
             $('#mc-embedded-subscribe-form').addClass('disabled')
             $("#mc-embedded-subscribe-form :input").prop("disabled", true);
 
