@@ -18,12 +18,16 @@ body {
 }
 
 input[type="email"], input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   font: inherit;
   font-size: 16px;
   padding: 0.5em;
   color: #4f72ff;
   border: solid 1px #4f72ff;
   margin-bottom: 1em;
+  border-radius: 0;
 }
 
 input[type="email"] {
@@ -35,14 +39,17 @@ input[type="text"]::placeholder {
 }
 
 input[type="submit"] {
-font-size: 16px;
-background-color: #4f72ff;
-font-family: 'Times New Roman', 'Georgia', serif;
-font-weight: bold;
--webkit-appearance: none;
-border: solid 1px;
-padding: .5em;
-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  background-color: #4f72ff;
+  font-family: 'Times New Roman', 'Georgia', serif;
+  font-weight: bold;
+  border: solid 1px;
+  padding: .5em;
+  color: #fff;
+  border-radius: 0;
 }
 
 
